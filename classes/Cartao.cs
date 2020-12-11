@@ -2,7 +2,7 @@ namespace Sobrecarga.classes
 {
     public class Cartao
     {
-        public int Numero { get; set; }
+            public int Numero { get; set; }
         
         private string bandeira = "Mastercard";
 
@@ -15,7 +15,7 @@ namespace Sobrecarga.classes
         }
 
 
-        public bool ValidarCompra(int valor){
+        public bool ValidarCompra(float valor){
             if(valor > limite){
                 return false; 
             }else{
@@ -24,7 +24,8 @@ namespace Sobrecarga.classes
             }
 
 
-        public string RegistarCompra(float saldo, bool ValidarCompra){
+
+        public string RegistarCompra(bool ValidarCompra){
             if(ValidarCompra == true){
                 return "Compra realizada com sucesso";
             }else{

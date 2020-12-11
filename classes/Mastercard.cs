@@ -2,7 +2,8 @@ namespace Sobrecarga.classes
 {
     public class Mastercard : Cartao
     {
-        private int parcelas;
+        public int parcelas { get; set; }
+
 
         public string ComprarComDesconto(int parcelas){
             if(parcelas < 6){
